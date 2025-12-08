@@ -1,6 +1,6 @@
 ---
 title: "Week 6 Worklog"
-date: "`r Sys.Date()`"
+date: "2025-09-09"
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
@@ -55,3 +55,5 @@ pre: " <b> 1.6. </b> "
 
 * Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
 * ...
+
+

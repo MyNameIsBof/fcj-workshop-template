@@ -1,11 +1,10 @@
 ---
 title: "Internship Report"
-date: "`r Sys.Date()`"
+date: "2025-09-09"
 weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
 {{% notice warning %}}
@@ -13,11 +12,12 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Full Name:** Do Nguyen Duy Khang
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Phone Number:** 0933681718
+
+&emsp; **Email:** khangdndse182375@fpt.edu.vn
 
 &emsp; **University:** Ho Chi Minh City University of Technology and Education
 
