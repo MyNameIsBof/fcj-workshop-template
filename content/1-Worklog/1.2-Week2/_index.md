@@ -1,70 +1,56 @@
 ---
 title: "Week 2 Worklog"
-date: "2025-09-09"
+date: 2025-09-09
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-
 ### Week 2 Objectives:
 
-* Gain proficiency in AWS network security concepts, specifically Security Groups and Network ACLs.
-* Explore VPC connectivity options and understand different network interconnection methods.
-* Study load balancing principles and familiarize with AWS Elastic Load Balancer types and their use cases.
+- Master knowledge of network security in AWS (Security Groups, NACL).
+- Understand VPC connectivity and network connection methods.
+- Learn about load balancing with AWS ELB and Load Balancer types.
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2 | - Study Security Groups: <br>&emsp; + Core concepts and stateful behavior <br>&emsp; + Rule creation and configuration procedures <br>&emsp; + Application to Elastic Network Interfaces | 08/11/2025 | 08/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 3 | - Explore Network ACL (NACL): <br>&emsp; + Fundamental concepts and stateless characteristics <br>&emsp; + Key differences between NACL and Security Groups <br>&emsp; + Sequential rule evaluation from top to bottom | 08/12/2025 | 08/12/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 4 | - **Hands-on Practice:** <br>&emsp; + Create Security Group for EC2 instance <br>&emsp; + Configure NACL for subnet <br>&emsp; + Compare security effectiveness between both methods <br> - Study VPC Flow Logs | 08/13/2025 | 08/13/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 5 | - Learn about VPC connectivity: <br>&emsp; + VPC Peering and its limitations <br>&emsp; + Transit Gateway <br>&emsp; + Site-to-Site VPN <br>&emsp; + AWS Direct Connect | 08/14/2025 | 08/14/2025 | <https://cloudjourney.awsstudygroup.com/> |
-| 6 | - Study Elastic Load Balancing: <br>&emsp; + ELB concepts and types <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Network Load Balancer (NLB) <br>&emsp; + Sticky Session and Health Check <br> - **Hands-on Practice:** <br>&emsp; + Create ALB to distribute traffic <br>&emsp; + Configure Target Groups | 08/15/2025 | 08/15/2025 | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks to be implemented this week:
 
+| Day | Tasks                                                                                                                                                                                                                                                                                                                         | Start Date | Completion Date | Documentation Source                      |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Learn about Security Groups: <br>&emsp; + Concepts and stateful characteristics <br>&emsp; + How to create and configure rules <br>&emsp; + Apply to Elastic Network Interface                                                                                                                                              | 08/11/2025 | 08/11/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Learn about Network ACL (NACL): <br>&emsp; + Concepts and stateless characteristics <br>&emsp; + Differences between NACL and Security Groups <br>&emsp; + Rule evaluation mechanism from top to bottom                                                                                                                     | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - **Hands-on Practice:** <br>&emsp; + Create Security Group for EC2 instance <br>&emsp; + Configure NACL for subnet <br>&emsp; + Compare security effectiveness between 2 methods <br> - Learn about VPC Flow Logs                                                                                                            | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Learn about VPC connectivity: <br>&emsp; + VPC Peering and limitations <br>&emsp; + Transit Gateway <br>&emsp; + Site-to-Site VPN <br>&emsp; + AWS Direct Connect                                                                                                                                                           | 08/14/2025 | 08/14/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Learn about Elastic Load Balancing: <br>&emsp; + ELB concepts and types <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Network Load Balancer (NLB) <br>&emsp; + Sticky Session and Health Check <br> - **Hands-on Practice:** <br>&emsp; + Create ALB to distribute traffic <br>&emsp; + Configure Target Groups | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 2 Achievements:
 
-* Developed clear understanding of Security Groups and NACL:
+- Gained clear understanding of Security Groups and NACL:
 
-  * Security Groups function as stateful firewalls that only permit "allow" rules
+  - Security Groups are stateful firewalls that only allow "allow" rules
+  - NACL is a stateless firewall applied to subnets
+  - Security Groups affect individual instances, NACL affects multiple servers in a subnet
 
-  * NACL serves as a stateless firewall applied at the subnet level
+- Learned how to use VPC Flow Logs to monitor IP traffic in VPC without capturing packet contents.
 
-  * Security Groups operate at the instance level, while NACL affects all servers within a subnet
+- Understood VPC connection methods:
 
-* Learned to utilize VPC Flow Logs for monitoring IP traffic within VPC without capturing packet contents.
+  - VPC Peering to connect 2 VPCs, does not support transitive routing
+  - Transit Gateway to connect multiple VPCs and on-premises networks
+  - Site-to-Site VPN with Virtual Private Gateway and Customer Gateway
+  - AWS Direct Connect with low latency (20-30ms)
 
-* Understood various VPC connection methods:
+- Mastered knowledge of Elastic Load Balancing:
 
-  * VPC Peering connects two VPCs but does not support transitive routing
+  - 4 types: ALB, NLB, Classic LB, Gateway LB
+  - ALB operates at Layer 7, supports HTTP/HTTPS and path-based routing
+  - NLB operates at Layer 4, supports TCP/TLS and static IP
+  - Features: Health Check, Sticky Session, Access Logs
 
-  * Transit Gateway enables connectivity between multiple VPCs and on-premises networks
+- Successfully completed hands-on practice:
 
-  * Site-to-Site VPN uses Virtual Private Gateway and Customer Gateway
+  - Created Security Groups for EC2 with appropriate rules
+  - Configured NACL for subnet with logical rule ordering
+  - Set up Application Load Balancer with Target Groups
+  - Verified Load Balancer operation and traffic distribution
 
-  * AWS Direct Connect provides dedicated connections with low latency (20-30ms)
-
-* Gained proficiency in Elastic Load Balancing:
-
-  * Four main types: ALB, NLB, Classic Load Balancer, and Gateway Load Balancer
-
-  * ALB operates at Layer 7, supporting HTTP/HTTPS and path-based routing
-
-  * NLB operates at Layer 4, supporting TCP/TLS and providing static IP addresses
-
-  * Key features include Health Check, Sticky Session, and Access Logs
-
-* Successfully completed hands-on practice:
-
-  * Created Security Groups for EC2 with appropriate rules
-
-  * Configured NACL for subnet with logical rule ordering
-
-  * Set up Application Load Balancer with Target Groups
-
-  * Verified Load Balancer operation and traffic distribution
-
-* Developed ability to compare and select appropriate security solutions and network connectivity options for specific use cases.
-
-
+- Gained ability to compare and select appropriate security solutions and network connectivity for specific use cases.
