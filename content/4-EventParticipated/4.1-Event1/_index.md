@@ -1,6 +1,6 @@
 ---
 title: "Event 1"
-date: 2025-11-11
+date: 2025-09-09
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
@@ -123,6 +123,10 @@ Attending the **"GenAI-powered App-DB Modernization"** workshop was extremely va
 
 #### Some event photos
 
-*Add your event photos here*  
+![AWS GameDay Scoreboard](/images/4-EventParticipated/4.1-Event1/gameday-scoreboard.jpg)
+
+![Workshop Session](/images/4-EventParticipated/4.1-Event1/workshop-session.jpg)
+
+![Awards Ceremony](/images/4-EventParticipated/4.1-Event1/awards-ceremony.jpg)
 
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.

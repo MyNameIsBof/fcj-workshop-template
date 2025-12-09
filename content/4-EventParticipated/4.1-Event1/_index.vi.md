@@ -1,12 +1,12 @@
 ---
 title: "Event 1"
-date: 2025-11-11
+date: 2025-09-09
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch "GenAI-powered App-DB Modernization workshop"
 
 ### Mục Đích Của Sự Kiện
 
@@ -92,7 +92,7 @@ Chuyển đổi thành hệ thống modular – từng chức năng là một **
 
 ### Trải nghiệm trong event
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Tham gia workshop **"GenAI-powered App-DB Modernization"** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
 
 #### Học hỏi từ các diễn giả có chuyên môn cao
 - Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
@@ -117,7 +117,11 @@ Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải 
 - Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
 
+![AWS GameDay Scoreboard](/images/4-EventParticipated/4.1-Event1/gameday-scoreboard.jpg)
 
+![Workshop Session](/images/4-EventParticipated/4.1-Event1/workshop-session.jpg)
+
+![Awards Ceremony](/images/4-EventParticipated/4.1-Event1/awards-ceremony.jpg)
+
+> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp em thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
