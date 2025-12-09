@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# How federal agency leaders are using AWS tools to improve efficiency
+# Configure granular access permissions to Amazon Bedrock models using Amazon SageMaker Unified Studio
 
 By Emma Harrison on July 9, 2025 in Amazon SageMaker, Artificial Intelligence, Customer Solutions, Generative AI, Government, Migration, Public Sector Permalink Share
 
