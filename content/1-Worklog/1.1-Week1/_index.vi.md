@@ -6,10 +6,6 @@ chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 ### Mục tiêu tuần 1:
 
 - Kết nối, làm quen với các thành viên trong First Cloud Journey.
@@ -33,7 +29,6 @@ pre: " <b> 1.1. </b> "
   - Storage
   - Networking
   - Database
-  - ...
 
 - Đã tạo và cấu hình AWS Free Tier account thành công.
 
@@ -44,7 +39,6 @@ pre: " <b> 1.1. </b> "
   - Access Key
   - Secret Key
   - Region mặc định
-  - ...
 
 - Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
 
@@ -53,7 +47,5 @@ pre: " <b> 1.1. </b> "
   - Xem dịch vụ EC2
   - Tạo và quản lý key pair
   - Kiểm tra thông tin dịch vụ đang chạy
-  - ...
 
 - Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-- ...

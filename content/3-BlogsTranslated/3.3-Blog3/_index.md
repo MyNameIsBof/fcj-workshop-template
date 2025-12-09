@@ -5,124 +5,53 @@ weight: 1
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Getting Started with Healthcare Data Lakes: Using Microservices
+# How federal agency leaders are using AWS tools to improve efficiency
 
-Data lakes can help hospitals and healthcare facilities turn data into business insights, maintain business continuity, and protect patient privacy. A **data lake** is a centralized, managed, and secure repository to store all your data, both in its raw and processed forms for analysis. Data lakes allow you to break down data silos and combine different types of analytics to gain insights and make better business decisions.
+By Emma Harrison on July 9, 2025 in Amazon SageMaker, Artificial Intelligence, Customer Solutions, Generative AI, Government, Migration, Public Sector Permalink Share
 
-This blog post is part of a larger series on getting started with setting up a healthcare data lake. In my final post of the series, *“Getting Started with Healthcare Data Lakes: Diving into Amazon Cognito”*, I focused on the specifics of using Amazon Cognito and Attribute Based Access Control (ABAC) to authenticate and authorize users in the healthcare data lake solution. In this blog, I detail how the solution evolved at a foundational level, including the design decisions I made and the additional features used. You can access the code samples for the solution in this Git repo for reference.
+Federal agencies are working to meet the demand for systems that can keep up with a tech-savvy public. Agency leaders are seizing the opportunity to restructure government by modernizing legacy systems and finding safer ways to serve citizens digitally. At the AWS Summit in Washington, DC 2025, federal leaders presented how they are using Amazon Web Services (AWS) to improve efficiency.
 
----
+Agencies are using cloud tools to increase productivity, minimize resource usage, and improve their ability to serve the public effectively. This article highlights pioneering leaders who are opening new paths in government cloud computing.
 
-## Architecture Guidance
+## FCC modernizes 94 percent of systems
 
-The main change since the last presentation of the overall architecture is the decomposition of a single service into a set of smaller services to improve maintainability and flexibility. Integrating a large volume of diverse healthcare data often requires specialized connectors for each format; by keeping them encapsulated separately as microservices, we can add, remove, and modify each connector without affecting the others. The microservices are loosely coupled via publish/subscribe messaging centered in what I call the “pub/sub hub.”
+The Federal Communications Commission (FCC) was struggling with outdated, legacy infrastructure that was expensive and inefficient to maintain. Frequent hardware challenges, outdated application technology stacks, and increasing cybersecurity compliance challenges were putting pressure on the agency. High operating costs, limited scalability, and dependence on specialized skill sets to manage legacy systems were slowing progress. Don Tweedie, FCC Deputy Chief Information Officer for Technology Delivery, and his team recognized the need for a fundamental transformation.
 
-This solution represents what I would consider another reasonable sprint iteration from my last post. The scope is still limited to the ingestion and basic parsing of **HL7v2 messages** formatted in **Encoding Rules 7 (ER7)** through a REST interface.
+Tweedie led this effort by building a strategic playbook to modernize the FCC's network architecture. His vision focused on a cloud-first approach—prioritizing scalability, security, and flexibility. The agency began treating data as a strategic asset, implementing micro-segmentation, and leveraging native cloud features like auto-scaling and serverless computing. The result was a shift toward data-driven decision-making and a more flexible infrastructure.
 
-**The solution architecture is now as follows:**
+In just 20 months, the FCC moved 94 percent of its data center operations to the cloud and decommissioned approximately 300 underutilized servers—streamlining the technology stack and reducing operational stagnation.
 
-> *Figure 1. Overall architecture; colored boxes represent distinct services.*
+Tweedie emphasized the importance of starting with small, manageable pilot programs to build momentum and organizational buy-in. He recommended engaging security groups early, reinforcing zero-trust principles, upskilling current employees to address talent shortages, and establishing clear, actionable policies to guide the transformation.
 
----
+## KCNSC bridges collaboration gap
 
-While the term *microservices* has some inherent ambiguity, certain traits are common:  
-- Small, autonomous, loosely coupled  
-- Reusable, communicating through well-defined interfaces  
-- Specialized to do one thing well  
-- Often implemented in an **event-driven architecture**
+The Kansas City National Security Campus (KCNSC) operates on behalf of the National Nuclear Security Administration (NNSA) under the Department of Energy to protect the national nuclear program. With a distributed workforce of more than 7,000 people, the agency was increasingly struggling to build an effective collaborative environment in the unclassified space. The KCNSC team was grappling with inefficient data distribution, lengthy discussions about agency resource usage, and scaling challenges.
 
-When determining where to draw boundaries between microservices, consider:  
-- **Intrinsic**: technology used, performance, reliability, scalability  
-- **Extrinsic**: dependent functionality, rate of change, reusability  
-- **Human**: team ownership, managing *cognitive load*
+To address this urgent issue, Victor Doane, Enterprise Architect for Digital Transformation Program, pioneered the idea of a Joint Unclassified Cloud Environment (JUCE). He invited technical leaders and other groups to come together to identify organizational needs and discuss their different cloud transformation journeys to learn from each other's experiences. Doane prioritized engaging leadership, then driving a company-wide cultural shift toward modernization with support from AWS Professional Services.
 
----
+KCNSC used AWS Landing Zone Accelerator as the foundation for the unified cloud environment, then customized it to their needs. The project moved quickly: Doane presented the idea and successfully realized it in less than a year. The agency plans to use the enterprise blueprint to support other units in their cloud transformation journeys.
 
-## Technology Choices and Communication Scope
+## NIF pursues AI to recover lost work hours
 
-| Communication scope                       | Technologies / patterns to consider                                                        |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------ |
-| Within a single microservice              | Amazon Simple Queue Service (Amazon SQS), AWS Step Functions                               |
-| Between microservices in a single service | AWS CloudFormation cross-stack references, Amazon Simple Notification Service (Amazon SNS) |
-| Between services                          | Amazon EventBridge, AWS Cloud Map, Amazon API Gateway                                      |
+Lawrence Livermore National Laboratory's (LLNL) National Ignition Facility (NIF) owns some of the world's highest-energy lasers, capable of initiating nuclear fusion reactions similar to those that power stars. (They even created a miniature star in their lab.) The facility uses 192 laser beams controlled by thousands of subsystems. Daily, scientists use NIF to conduct physics experiments critical to national security and global energy research.
 
----
+However, deteriorating infrastructure, loss of legacy system expertise as team members retired, and equipment failures were hindering research. Random system errors and lack of the integrated expertise needed to fix them effectively led to hundreds of lost test hours in 2024. LLNL needed an intelligent, scalable solution to troubleshoot equipment effectively and preserve fading legacy knowledge.
 
-## The Pub/Sub Hub
+Shannon Ayers, Division Leader and Technical Manager at NIF, is part of the NIF Operations team, determined to solve these problems. They partnered with LLNL's AI Initiative to use AWS Professional Services to integrate generative AI tools into NIF's system search. The team used Amazon SageMaker to create a chat assistant using Retrieval Augmented Generation (RAG) technology to perform semantic search on NIF's massive incident log database. The tool generates step-by-step decision trees, giving staff instant access to experiment records and equipment recovery spanning more than 20 years. Issues that previously delayed experiments for hours can now be resolved in minutes, significantly increasing efficiency.
 
-Using a **hub-and-spoke** architecture (or message broker) works well with a small number of tightly related microservices.  
-- Each microservice depends only on the *hub*  
-- Inter-microservice connections are limited to the contents of the published message  
-- Reduces the number of synchronous calls since pub/sub is a one-way asynchronous *push*
+"AWS helped provide secure, scalable, FedRAMP-compliant infrastructure, and advanced AI tools like SageMaker and semantic search have accelerated our mission execution through improved efficiency, reduced technical debt by leveraging existing tools, and enhanced innovation by bringing together leading thinkers," Ayers stated. "The collaboration with AWS has transformed our troubleshooting process and is key to continuous operational excellence at the National Ignition Facility," she concluded.
 
-Drawback: **coordination and monitoring** are needed to avoid microservices processing the wrong message.
+This achievement will help NIF recover capacity to increase the number of experiments per year. In the future, the team plans to expand predictive maintenance capabilities and explore operational management tools to support the agency's critical operations through 2040 and beyond.
 
----
+## USPTO sees immediate IT productivity increase using generative AI
 
-## Core Microservice
+The United States Patent and Trademark Office (USPTO) grants patents and registers trademarks for creators. With increasing demand, the agency needed to modernize systems to provide more digital services without increasing resource usage. Like other agencies, USPTO's legacy infrastructure had limited its ability to meet the needs of domestic creators.
 
-Provides foundational data and communication layer, including:  
-- **Amazon S3** bucket for data  
-- **Amazon DynamoDB** for data catalog  
-- **AWS Lambda** to write messages into the data lake and catalog  
-- **Amazon SNS** topic as the *hub*  
-- **Amazon S3** bucket for artifacts such as Lambda code
+Stephan Mitchev, former Chief Technology Officer of USPTO, had a vision to improve his division's IT system efficiency. He used AWS to deploy chat assistants and code assistants into developer workflows, helping the team perform tasks like unit testing, documentation, and reverse engineering legacy code, resulting in an immediate 20% productivity increase. As of May 2025, Mitchev had brought 27 teams into the new workflow, all reporting positive results.
 
-> Only allow indirect write access to the data lake through a Lambda function → ensures consistency.
+Mitchev's advice to teams is to start small with AI tool deployments and measure results. He emphasized using AI to augment rather than replace current employees, and advised teams to measure and demonstrate return on investment (ROI) at each step to justify continued use.
 
----
+Federal agencies are using AWS to modernize systems, increase efficiency, and improve their ability to serve the public. Connect with your account team to learn how AWS can improve your organization's operational efficiency.
 
-## Front Door Microservice
-
-- Provides an API Gateway for external REST interaction  
-- Authentication & authorization based on **OIDC** via **Amazon Cognito**  
-- Self-managed *deduplication* mechanism using DynamoDB instead of SNS FIFO because:  
-  1. SNS deduplication TTL is only 5 minutes  
-  2. SNS FIFO requires SQS FIFO  
-  3. Ability to proactively notify the sender that the message is a duplicate  
-
----
-
-## Staging ER7 Microservice
-
-- Lambda “trigger” subscribed to the pub/sub hub, filtering messages by attribute  
-- Step Functions Express Workflow to convert ER7 → JSON  
-- Two Lambdas:  
-  1. Fix ER7 formatting (newline, carriage return)  
-  2. Parsing logic  
-- Result or error is pushed back into the pub/sub hub  
-
----
-
-## New Features in the Solution
-
-### 1. AWS CloudFormation Cross-Stack References
-Example *outputs* in the core microservice:
-```yaml
-Outputs:
-  Bucket:
-    Value: !Ref Bucket
-    Export:
-      Name: !Sub ${AWS::StackName}-Bucket
-  ArtifactBucket:
-    Value: !Ref ArtifactBucket
-    Export:
-      Name: !Sub ${AWS::StackName}-ArtifactBucket
-  Topic:
-    Value: !Ref Topic
-    Export:
-      Name: !Sub ${AWS::StackName}-Topic
-  Catalog:
-    Value: !Ref Catalog
-    Export:
-      Name: !Sub ${AWS::StackName}-Catalog
-  CatalogArn:
-    Value: !GetAtt Catalog.Arn
-    Export:
-      Name: !Sub ${AWS::StackName}-CatalogArn
-
-
+**TAGS:** Artificial Intelligence, AWS Public Sector, customer story, digital transformation, efficiencies, federal, government, migration, modernization

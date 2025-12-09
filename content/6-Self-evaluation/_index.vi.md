@@ -1,41 +1,68 @@
 ---
 title: "Tự đánh giá"
-date: "2025-09-09"
+date: 2025-09-09
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Trong suốt thời gian thực tập tại **First Cloud Journey** từ **12 tháng 8 năm 2025** đến **12 tháng 11 năm 2025**, em đã có cơ hội áp dụng kiến thức và kỹ năng đã học ở trường vào môi trường phát triển phần mềm thực tế.  
 
-Trong suốt thời gian thực tập tại **[Tên công ty/tổ chức]** từ **[ngày bắt đầu]** đến **[ngày kết thúc]**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **[mô tả ngắn gọn dự án hoặc công việc chính]**, qua đó cải thiện kỹ năng **[liệt kê kỹ năng: lập trình, phân tích, viết báo cáo, giao tiếp…]**.  
+Trong thời gian thực tập này, em đã tham gia vào **phát triển hệ thống quản lý nhân viên dựa trên web** cho một công ty công nghệ.  
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Hệ thống này được thiết kế để giúp các tổ chức quản lý dữ liệu nhân viên, chấm công và thông tin phòng ban một cách hiệu quả trên đám mây.  
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+Vị trí của em trong nhóm dự án là **Frontend Developer**, nơi em tập trung vào việc xây dựng giao diện người dùng, tích hợp API và đảm bảo thiết kế responsive và khả năng sử dụng.
 
+Em luôn cố gắng hoàn thành các nhiệm vụ được giao đúng hạn, tuân thủ các tiêu chuẩn quy trình làm việc của công ty và hợp tác chặt chẽ với các đồng đội để cung cấp các tính năng chất lượng cao và cải thiện hiệu suất tổng thể của hệ thống.
+
+Dưới đây là tự đánh giá của em dựa trên các tiêu chí chính:
 
 | STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
 | --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ☐   | ✅   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ☐   | ☐   | ✅          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ☐   | ✅   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+| 1   | **Kiến thức và kỹ năng chuyên môn** | Áp dụng kiến thức frontend, sử dụng framework hiệu quả, cung cấp các component UI/UX             | ☐   | ✅   | ☐          |
+| 2   | **Khả năng học hỏi**                | Khả năng học các công cụ, framework và công nghệ frontend mới một cách nhanh chóng               | ☐   | ✅   | ☐          |
+| 3   | **Chủ động**                        | Chủ động cải thiện giao diện và sửa các lỗi nhỏ mà không cần chờ chỉ dẫn                         | ☐   | ✅   | ☐          |
+| 4   | **Tinh thần trách nhiệm**           | Hoàn thành các module UI và nhiệm vụ được giao đúng hạn với chất lượng tốt                       | ☐   | ✅   | ☐          |
+| 5   | **Kỷ luật**                         | Tuân thủ lịch trình công ty, tiêu chuẩn mã hóa và hướng dẫn kiểm soát phiên bản                  | ☐   | ✅   | ☐          |
+| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận phản hồi và liên tục nâng cao hiệu suất frontend                                   | ☐   | ✅   | ☐          |
+| 7   | **Giao tiếp**                       | Thảo luận yêu cầu và cập nhật rõ ràng với các nhóm backend và QA                                 | ☐   | ✅   | ☐          |
+| 8   | **Hợp tác nhóm**                    | Hợp tác hiệu quả với các nhà phát triển và nhà thiết kế trong dự án                              | ☐   | ✅   | ☐          |
+| 9   | **Ứng xử chuyên nghiệp**            | Duy trì sự tôn trọng, hợp tác và thái độ tích cực tại nơi làm việc                               | ☐   | ✅   | ☐          |
+| 10  | **Tư duy giải quyết vấn đề**        | Xác định các vấn đề UI/UX, gỡ lỗi và tối ưu hóa các component                                    | ☐   | ✅   | ☐          |
+| 11  | **Đóng góp vào dự án/tổ chức**      | Hỗ trợ mục tiêu nhóm bằng cách cải thiện chất lượng giao diện và đề xuất cải tiến khả năng sử dụng | ☐   | ✅   | ☐          |
+| 12  | **Tổng thể**                        | Hiệu suất và phát triển chung trong suốt thời gian thực tập                                      | ☐   | ✅   | ☐          |
+
+---
+
+### Điểm mạnh
+
+- Có được kinh nghiệm thực tế trong **phát triển frontend** sử dụng React, Tailwind CSS và tích hợp với RESTful APIs.  
+
+- Phát triển hiểu biết sâu hơn về **nguyên tắc UI/UX**, khả năng truy cập và thiết kế responsive.  
+
+- Tăng cường làm việc nhóm, giao tiếp và khả năng thích ứng thông qua hợp tác tích cực với các nhà phát triển backend.  
+
+- Có được kinh nghiệm thực tế trong **môi trường dự án dựa trên đám mây (AWS)** và sử dụng các công cụ như **GitHub và CodePipeline**.  
+
+---
 
 ### Cần cải thiện
 
-* Nâng cao tính kỹ luật, chấp hành nghiêm chỉnh nội quy của công ty hoặc bất kỳ trong một tổ chức nào
-* Cải thiện trong cách tư duy giải quyết vấn đề
-* Học cách giao tiếp tốt hơn trong giao tiếp hằng ngày và trong công việc, xử lý tình huống
+- **Nâng cao kỹ năng giải quyết vấn đề và gỡ lỗi:** Tiếp tục thực hành các kỹ thuật gỡ lỗi nâng cao và tối ưu hóa hiệu suất.  
 
+- **Cải thiện rõ ràng trong giao tiếp:** Cung cấp các cập nhật ngắn gọn và có cấu trúc hơn trong các cuộc họp stand-up hàng ngày.  
+
+- **Tăng cường kỷ luật mã hóa:** Tuân thủ các quy ước dự án một cách nhất quán hơn, đặc biệt là trong tài liệu và kiểm soát phiên bản.  
+
+- **Khám phá các chủ đề frontend sâu hơn:** Tìm hiểu thêm về quản lý trạng thái nâng cao, kiểm thử và quy trình triển khai.  
+
+---
+
+### Tổng kết
+
+Nhìn chung, em đánh giá hiệu suất thực tập của bản thân ở mức **Khá**.  
+
+Thông qua thời gian thực tập này, em đã có được những kinh nghiệm thực tế quý giá với vai trò là nhà phát triển frontend, cải thiện kỹ năng kỹ thuật và làm việc nhóm, đồng thời phát triển hiểu biết rõ ràng hơn về cách các hệ thống chuyên nghiệp dựa trên đám mây được xây dựng và duy trì.  
+
+Mặc dù vẫn còn nhiều điểm cần cải thiện trong giao tiếp và tối ưu hóa mã, em tin rằng thời gian thực tập này đã đặt nền tảng vững chắc cho sự nghiệp tương lai của em trong lĩnh vực phát triển web.

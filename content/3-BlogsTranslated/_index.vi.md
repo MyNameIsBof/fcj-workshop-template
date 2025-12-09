@@ -5,23 +5,14 @@ weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
+Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch:
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+### [Blog 1 - Điều phối xử lý tài liệu với AWS AppSync Events và Amazon Bedrock](3.1-Blog1/)
+Blog này giới thiệu một giải pháp giúp đơn giản hóa việc tạo quy trình xử lý tài liệu thông minh, với một ứng dụng web cho phép khách hàng tải lên các tệp (tài liệu và hình ảnh) và thu thập thông tin chi tiết từ đó (tóm tắt, trích xuất trường và phân loại). Giải pháp này chủ yếu sử dụng công nghệ serverless, bao gồm một websocket để nhận thông tin chi tiết theo thời gian thực. Bài viết bao gồm Amazon Bedrock Data Automation, AWS Step Functions, AWS Lambda, AWS AppSync Events, AWS Amplify, Amazon EventBridge, Amazon Cognito, và Amazon S3.
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã dịch. Ví dụ:
+### [Blog 2 - Các nhà lãnh đạo cơ quan liên bang đang sử dụng các công cụ AWS như thế nào để cải thiện hiệu quả](3.2-Blog2/)
+Blog này nêu bật cách các nhà lãnh đạo cơ quan liên bang đang sử dụng Amazon Web Services (AWS) để cải thiện hiệu quả. Bài viết trình bày các case studies từ Federal Communications Commission (FCC), Kansas City National Security Campus (KCNSC), National Ignition Facility (NIF), và United States Patent and Trademark Office (USPTO), cho thấy cách các cơ quan này hiện đại hóa hệ thống, tăng năng suất và cải thiện khả năng phục vụ công chúng hiệu quả bằng cách sử dụng các công cụ đám mây và công nghệ AI.
 
-###  [Blog 1 - Getting started with healthcare data lakes: Using microservices](3.1-Blog1/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 4 - ...](3.4-Blog4/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 5 - ...](3.5-Blog5/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
-###  [Blog 6 - ...](3.6-Blog6/)
-Blog này giới thiệu cách bắt đầu xây dựng data lake trong lĩnh vực y tế bằng cách áp dụng kiến trúc microservices. Bạn sẽ tìm hiểu vì sao data lake quan trọng trong việc lưu trữ và phân tích dữ liệu y tế đa dạng (hồ sơ bệnh án điện tử, dữ liệu xét nghiệm, thiết bị IoT y tế…), cách microservices giúp hệ thống linh hoạt, dễ mở rộng và dễ bảo trì hơn. Bài viết cũng hướng dẫn các bước khởi tạo môi trường, tổ chức pipeline xử lý dữ liệu, và đảm bảo tuân thủ các tiêu chuẩn bảo mật & quyền riêng tư như HIPAA.
+### [Blog 3 - Các nhà lãnh đạo cơ quan liên bang đang sử dụng các công cụ AWS như thế nào để cải thiện hiệu quả](3.3-Blog3/)
+Blog này nêu bật cách các nhà lãnh đạo cơ quan liên bang đang sử dụng Amazon Web Services (AWS) để cải thiện hiệu quả. Bài viết trình bày các case studies từ Federal Communications Commission (FCC), Kansas City National Security Campus (KCNSC), National Ignition Facility (NIF), và United States Patent and Trademark Office (USPTO), cho thấy cách các cơ quan này hiện đại hóa hệ thống, tăng năng suất và cải thiện khả năng phục vụ công chúng hiệu quả bằng cách sử dụng các công cụ đám mây và công nghệ AI.
 

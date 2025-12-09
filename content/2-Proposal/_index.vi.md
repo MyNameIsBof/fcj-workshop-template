@@ -1,109 +1,387 @@
 ---
 title: "Bản đề xuất"
-date: "2025-09-09"
+date: 2025-09-09
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Hệ thống Quản lý Nhân sự Doanh nghiệp
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+## Giải pháp Quản lý Nhân sự Toàn diện cho Doanh nghiệp Hiện đại
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+---
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+## 1. Tóm tắt Điều hành
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+**Hệ thống Quản lý Nhân sự Doanh nghiệp** là giải pháp quản lý nhân sự tích hợp được thiết kế cho các doanh nghiệp vừa tại Việt Nam, hỗ trợ **100-500 nhân viên**. Hệ thống tự động hóa toàn bộ quy trình nhân sự từ quản lý hồ sơ, theo dõi chấm công, tính lương đến đánh giá hiệu suất. Đây là **dự án nội bộ** được phát triển bởi nhóm, tập trung vào **MVP với chi phí tối ưu dưới $100/tháng** trong giai đoạn đầu (100 nhân viên), sử dụng **kiến trúc serverless AWS** với Lambda, API Gateway, DynamoDB để đảm bảo hiệu suất cao và chi phí thấp.
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+---
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+## 2. Tuyên bố Vấn đề
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+### Vấn đề Hiện tại
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+- Các doanh nghiệp Việt Nam sử dụng **Excel** hoặc phần mềm nhân sự cũ, gây lãng phí thời gian và sai sót.
+- Các quy trình thủ công (chấm công, tính lương) **không được tích hợp**.
+- Không có **quy trình phê duyệt tự động**.
+- Khó quản lý **phân quyền chi tiết**.
+- Báo cáo yếu, **không thời gian thực**.
+- Chi phí cao cho các giải pháp SAP, Workday.
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+### Giải pháp Đề xuất
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+Hệ thống sử dụng **Kiến trúc Serverless AWS** để tối ưu chi phí:
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+- **Tính toán:** AWS Lambda (trả theo sử dụng, không có chi phí nhàn rỗi).
+- **API:** API Gateway REST API.
+- **Cơ sở dữ liệu:** DynamoDB (thanh toán theo nhu cầu).
+- **Cache:** ElastiCache Redis (cache.t3.micro) - tùy chọn cho giai đoạn 2.
+- **Xác thực:** **AWS Cognito** (miễn phí <50K MAU).
+- **Lưu trữ:** S3 cho tài liệu, CloudFront CDN.
+- **CI/CD:** **GitHub Actions** cho triển khai tự động.
+- **Giám sát:** **CloudWatch** (miễn phí).
+- **Bảo mật:** Route 53, WAF (quy tắc tối ưu chi phí), IAM Roles.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+### Tính năng Chính
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- **Single Sign-On** (Google, Microsoft 365).
+- **RBAC chi tiết** (Admin, Manager, Employee, Payroll Officer).
+- **Check-in/out với xác thực GPS**.
+- **Tính lương tự động** với công thức linh hoạt.
+- **Quy trình phê duyệt** (nghỉ phép, điều chỉnh lương).
+- **Ứng dụng di động** (React Native) cho chấm công.
+- **Bảng điều khiển báo cáo thời gian thực**.
+- Nhật ký kiểm toán toàn diện.
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+### Lợi ích
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+- Tiết kiệm **70%** thời gian xử lý nhân sự thủ công.
+- Giảm **90%** lỗi nhập liệu.
+- Chi phí chỉ **$45-70/tháng** cho 100 nhân viên (rẻ hơn 90% so với SAP/Workday).
+- **Phát triển nội bộ** - không có chi phí thuê ngoài.
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+---
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+## 3. Kiến trúc Giải pháp
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+Đây là sơ đồ kiến trúc đám mây của hệ thống:
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+![Kiến trúc Hệ thống HR](/images/2-Proposal/proposalaws1.jpg)
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+### Dịch vụ AWS Sử dụng
 
+| Dịch vụ AWS                    | Chức năng Chính                                   |
+| :----------------------------- | :------------------------------------------------- |
+| **AWS Lambda**                 | Logic API backend (Node.js 20.x)                   |
+| **API Gateway**                | Endpoint REST API, xác thực yêu cầu             |
+| **Amazon DynamoDB**            | Cơ sở dữ liệu NoSQL (thanh toán theo nhu cầu)                 |
+| **AWS Cognito**                | Xác thực, SSO (Google/Microsoft), JWT tokens |
+| **Amazon S3**                  | Lưu trữ tài liệu (CV, hợp đồng, bảng lương)         |
+| **CloudFront**                 | CDN cho tài sản tĩnh và S3                       |
+| **Route 53**                   | Quản lý DNS                                     |
+| **AWS WAF** (tùy chọn Giai đoạn 2) | Bảo vệ API                                     |
+| **CloudWatch**                 | Logs, giám sát (miễn phí)                       |
+| **Secrets Manager**            | API keys, thông tin xác thực                              |
+
+### Thiết kế Thành phần
+
+#### Lớp Xác thực
+
+- Cognito User Pools với JWT (RS256).
+- Lambda authorizer cho API Gateway.
+- MFA tùy chọn (SMS/TOTP) - Giai đoạn 2.
+
+#### Lớp API
+
+- **Các hàm AWS Lambda** (Node.js) được triển khai qua GitHub Actions.
+- API Gateway REST API với định tuyến dựa trên resource.
+- Giới hạn tốc độ (10 yêu cầu/giây).
+- CORS được cấu hình cho web/mobile.
+
+#### Logic Nghiệp vụ (Các hàm Lambda)
+
+- Quản lý nhân viên (CRUD, hợp đồng, kỹ năng).
+- Theo dõi chấm công (check-in/out, xác thực GPS).
+- Quản lý nghỉ phép (yêu cầu, phê duyệt, số dư).
+- Công cụ tính lương (tính lương, thuế, bảo hiểm).
+- Đánh giá hiệu suất (theo dõi KPI).
+- Thông báo email (SES miễn phí).
+
+#### Lớp Dữ liệu - Bảng DynamoDB
+
+- **Users** - GSI trên email
+- **Employees** - GSI trên department_id
+- **Departments**
+- **AttendanceLogs** - GSI trên employee_id + date
+- **LeaveRequests** - GSI trên employee_id + status
+- **PayrollRecords** - GSI trên employee_id + month
+- **Approvals** - GSI trên approver_id + status
+
+#### Lớp Lưu trữ
+
+- S3 Standard cho tài liệu mới (<30 ngày).
+- S3 Lifecycle → Glacier Deep Archive (>90 ngày).
+- Presigned URLs để upload/download an toàn.
+- CloudFront distribution cho static web hosting.
+
+#### Frontend
+
+- **Next.js 14** (React 18) + TypeScript - Static export.
+- Material-UI components.
+- Được lưu trữ trên **CloudFront + S3** (không có chi phí server).
+- Ứng dụng di động: **React Native** (Expo) với AsyncStorage.
+
+#### Pipeline CI/CD
+
+- Workflow **GitHub Actions**:
+  - Build các hàm Lambda → Gói ZIP
+  - Triển khai lên Lambda qua AWS CLI
+  - Cập nhật cấu hình API Gateway
+  - Triển khai frontend lên S3
+- Kiểm thử đơn vị Jest tự động.
+
+---
+
+## 4. Triển khai Kỹ thuật
+
+### Giai đoạn 1: MVP Core (Tháng 1-2)
+
+- **Tháng 1:**
+  - Thiết lập AWS (Cognito, bảng DynamoDB, S3, Lambda).
+  - Xác thực + UI Đăng nhập.
+  - API CRUD Nhân viên + bảng điều khiển admin.
+- **Tháng 2:**
+  - API check-in/out chấm công với GPS.
+  - MVP ứng dụng di động (React Native).
+  - Quy trình yêu cầu nghỉ phép.
+  - Bảng điều khiển báo cáo cơ bản.
+
+### Giai đoạn 2: Tính lương & Tự động hóa (Tháng 3-4)
+
+- **Tháng 3:**
+  - Công cụ tính lương (Lambda).
+  - Tạo bảng lương (PDF qua Lambda layer).
+  - Quy trình phê duyệt.
+- **Tháng 4:**
+  - Thông báo email (SES).
+  - Ghi nhật ký kiểm toán vào DynamoDB.
+  - Xuất báo cáo (CSV).
+  - Tối ưu hóa hiệu suất.
+
+### Giai đoạn 3: Tính năng Nâng cao (Tháng 5-6)
+
+- Module đánh giá hiệu suất.
+- Theo dõi đào tạo.
+- Bảng điều khiển phân tích nâng cao.
+- Tăng cường bảo mật.
+- Kiểm thử tải & tối ưu hóa.
+- Đào tạo người dùng & tài liệu.
+
+### Tech Stack
+
+| Thành phần                  | Công nghệ/Dịch vụ                               |
+| :------------------------- | :----------------------------------------------- |
+| **Backend**                | Node.js 20.x, AWS Lambda, AWS SDK v3             |
+| **Cơ sở dữ liệu**               | DynamoDB (mẫu thiết kế single-table)           |
+| **Frontend**               | Next.js 14, React 18, TypeScript, Material-UI v5 |
+| **Mobile**                 | React Native (Expo), AsyncStorage                |
+| **Infrastructure as Code** | AWS SAM / Serverless Framework                   |
+| **CI/CD**                  | GitHub Actions                                   |
+
+---
+
+## 5. Lộ trình & Mốc
+
+| Tháng   | Giai đoạn                | Kết quả Chính                                  |
+| :------ | :------------------- | :------------------------------------------------ |
+| **1-2** | MVP Core             | Xác thực, Quản lý nhân viên, Ứng dụng di động chấm công  |
+| **3-4** | Tính lương & Tự động hóa | Công cụ tính lương, quy trình phê duyệt, thông báo |
+| **5-6** | Nâng cao & Ra mắt    | Phân tích, đánh giá hiệu suất, UAT, go-live      |
+
+---
+
+## 6. Ước tính Ngân sách
+
+### Chi phí AWS Hàng tháng (Giai đoạn 1: 100 nhân viên, ~5,000 lời gọi API/ngày)
+
+#### Kiến trúc Serverless - Tối ưu Chi phí
+
+| Dịch vụ                                                          | Cấu hình                                 | Chi phí/Tháng |
+| :--------------------------------------------------------------- | :-------------------------------------------- | ---------: |
+| **AWS Lambda**                                                   | 150K lời gọi, 512MB, 500ms trung bình            |         $0 |
+| ↳ _Miễn phí: 1M yêu cầu + 400K GB-giây/tháng_               | (Trong miễn phí)                            |            |
+| **API Gateway**                                                  | 150K yêu cầu REST API/tháng                  |      $0.15 |
+| ↳ _$3.50 mỗi triệu sau 1M đầu tiên (miễn phí năm 1)_          |                                               |            |
+| **DynamoDB**                                                     | Theo nhu cầu, 5GB lưu trữ, 1M đọc, 500K ghi |      $3.50 |
+| ↳ _Lưu trữ: $1.25/GB ($6.25) + Đọc: $0.25/M + Ghi: $1.25/M_ |                                               |            |
+| **S3 Storage**                                                   | 20GB tài liệu (100 người dùng)                    |      $0.46 |
+| **S3 Requests**                                                  | 20K PUT, 100K GET/tháng                       |      $0.14 |
+| **S3 Glacier (lưu trữ)**                                         | 10GB tài liệu cũ                            |      $0.10 |
+| **CloudFront**                                                   | 10GB chuyển, 200K yêu cầu                  |      $1.00 |
+| **Route 53**                                                     | 1 hosted zone + 1M truy vấn                    |      $0.90 |
+| **CloudWatch Logs**                                              | 2GB logs/tháng                                |         $0 |
+| ↳ _(5GB đầu tiên miễn phí)_                                             | (Trong miễn phí)                            |            |
+| **Secrets Manager**                                              | 2 secrets                                     |      $0.80 |
+| **SES (email)**                                                  | 500 email/tháng                              |      $0.05 |
+| **Cognito**                                                      | <50K MAU                                      |         $0 |
+| ↳ _(Miễn phí)_                                                 | (Trong miễn phí)                            |            |
+| **Data Transfer OUT**                                            | 5GB ra internet                               |      $0.45 |
+| **Dự phòng (10%)**                                            | Buffer                                        |      $0.75 |
+|                                                                  |                                               |            |
+| **TỔNG AWS/THÁNG (100 người dùng)**                                  |                                               | **~$8.30** |
+
+#### Chi phí Khi Mở rộng lên 200 Người dùng (Giai đoạn 2)
+
+| Dịch vụ                                  | Thay đổi                               |  Chi phí/Tháng |
+| :--------------------------------------- | :------------------------------------ | ----------: |
+| Lambda                                   | 300K lời gọi (vẫn trong miễn phí) |          $0 |
+| API Gateway                              | 300K yêu cầu                         |       $0.30 |
+| DynamoDB                                 | 10GB, 2M đọc, 1M ghi             |       $9.50 |
+| S3 + CloudFront                          | 40GB lưu trữ, 20GB chuyển           |       $2.50 |
+| Route 53, Secrets, SES, Transfer         | (tương tự)                             |       $2.20 |
+| **ElastiCache Redis**                    | cache.t3.micro (tùy chọn)             |      $12.50 |
+| **AWS WAF**                              | Bảo vệ cơ bản (tùy chọn)           |       $7.00 |
+| Dự phòng                              |                                       |       $3.40 |
+|                                          |                                       |             |
+| **TỔNG (200 người dùng, có cache + WAF)**  |                                       | **~$37.40** |
+| **TỔNG (200 người dùng, không cache/WAF)** |                                       | **~$17.90** |
+
+#### Chi phí Khi Mở rộng lên 500 Người dùng (Giai đoạn 3)
+
+| Lambda + API Gateway | 750K lời gọi | $3.50 |
+| DynamoDB | 25GB, 5M đọc, 2.5M ghi | $32.50 |
+| S3 + CloudFront + Transfer | 100GB lưu trữ, 50GB CDN | $7.50 |
+| ElastiCache Redis | cache.t3.small | $25.00 |
+| AWS WAF | 2 quy tắc | $8.00 |
+| Route 53, Secrets, SES, khác | | $3.00 |
+| Dự phòng | | $8.00 |
+| | | |
+| **TỔNG (500 người dùng)** | | **~$87.50** |
+
+### Tóm tắt Chi phí Lưu trữ theo Giai đoạn
+
+| Giai đoạn              | Người dùng | Chi phí/Tháng |     Chi phí/Năm |
+| :----------------- | :---: | ---------: | ------------: |
+| **Giai đoạn 1 MVP**    |  100  |  **$8-12** | **~$100-150** |
+| **Giai đoạn 2 Tăng trưởng** |  200  | **$18-38** | **~$220-450** |
+| **Giai đoạn 3 Mở rộng**  |  500  | **$88-95** |   **~$1,050** |
+
+### Chi phí Phát triển (Nhóm nội bộ - KHÔNG có chi phí thuê ngoài)
+
+**Giả định:** Nhóm nội bộ đã có lương cố định, chỉ tính chi phí AWS và công cụ
+
+| Mục                                       |     Chi phí |
+| :----------------------------------------- | -------: |
+| Lưu trữ AWS (6 tháng dev/staging @ $5/tháng) |      $30 |
+| GitHub Pro (nhóm 5 người)                     |       $0 |
+| ↳ _(Có thể dùng miễn phí)_                    |          |
+| Tên miền (.com)                         | $12/năm |
+| Thư viện bên thứ ba (tùy chọn)           |       $0 |
+| **TỔNG CHI PHÍ PHÁT TRIỂN**                 | **~$42** |
+
+**Lưu ý:** Chi phí nhân sự KHÔNG được tính vì đây là nhóm nội bộ với lương cố định
+
+### Chi phí Vận hành Hàng năm (sau khi ra mắt)
+
+| Mục                                          |     Chi phí/Năm |
+| :-------------------------------------------- | ------------: |
+| Lưu trữ AWS (Giai đoạn 1: 100 người dùng)              |      $100-150 |
+| Dịch vụ bên thứ ba (SMS cho MFA - tùy chọn) |          $100 |
+| Gia hạn tên miền                                |           $12 |
+| **TỔNG VẬN HÀNH/NĂM (Giai đoạn 1)**            | **~$212-262** |
+
+### Phân tích ROI (Dự án nội bộ)
+
+**Đầu tư Ban đầu:**
+
+- Thiết lập + Công cụ dev: ~$42
+- AWS (6 tháng dev): ~$30
+- **Tổng ban đầu: ~$72**
+
+**Chi phí Vận hành Năm Đầu:**
+
+- Giai đoạn 1 (6 tháng, 100 người dùng): $60
+- Giai đoạn 2 (6 tháng, 200 người dùng): $150
+- **Tổng Năm 1: ~$210**
+
+**Tổng Chi phí Năm 1: ~$282**
+
+**Tiết kiệm so với Giải pháp Thay thế:**
+
+- SAP SuccessFactors: $8-15/người dùng/tháng = $9,600-18,000/năm
+- BambooHR: $6-10/người dùng/tháng = $7,200-12,000/năm
+- Excel thủ công: 1 FTE HR admin = $12,000/năm
+
+**Tiết kiệm Năm 1: $6,918 - $17,718**
+
+**ROI Năm 1: 2,454% - 6,281%** 🚀
+
+---
+
+## 7. Đánh giá Rủi ro & Giảm thiểu
+
+| Rủi ro                    | Tác động | Xác suất | Giảm thiểu                                            |
+| :---------------------- | :----- | :---------- | :---------------------------------------------------- |
+| Chi phí DynamoDB tăng đột biến    | Trung bình | Thấp         | Thanh toán theo nhu cầu, cảnh báo CloudWatch ở ngưỡng $30 |
+| Lambda cold starts      | Thấp    | Trung bình      | Giữ hàm ấm, tối ưu kích thước bundle <1MB        |
+| Giới hạn tốc độ API Gateway | Trung bình | Thấp         | Mặc định 10K req/s đủ, triển khai caching       |
+| Phụ thuộc nhà cung cấp (AWS)    | Trung bình | Cao        | Sử dụng Serverless Framework để dễ di chuyển              |
+| Đường cong học tập nhóm     | Thấp    | Trung bình      | Bắt đầu với 1-2 hàm Lambda, mở rộng dần dần     |
+
+### Thực hành Tối ưu Chi phí Tốt nhất
+
+- **Lambda:** Kích thước bundle <1MB, tái sử dụng kết nối, tránh cold starts.
+- **DynamoDB:** Thiết kế single-table, sử dụng GSI cẩn thận, thanh toán theo nhu cầu.
+- **S3:** Chính sách lifecycle đến Glacier, presigned URLs, CloudFront caching.
+- **API Gateway:** Response caching (30-60s), throttling.
+- **CloudWatch:** Giữ log 7 ngày, lọc log không cần thiết.
+
+---
+
+## 8. Kết quả Mong đợi
+
+### Cải tiến Kỹ thuật
+
+- **85%** quy trình nhân sự được tự động hóa.
+- Bảng điều khiển thời gian thực với dữ liệu < 5 giây.
+- **< 1s** thời gian phản hồi API (P95) với Lambda.
+- **70%** nhân viên sử dụng ứng dụng di động.
+- Không cần bảo trì server.
+- **Khả năng mở rộng vô hạn** với serverless.
+
+### Giá trị Kinh doanh
+
+- Nhóm nhân sự giảm **60%** khối lượng công việc thủ công.
+- Sự hài lòng nhân viên tăng **40%** (tự phục vụ).
+- **100%** dấu vết kiểm toán cho tuân thủ.
+- Độ chính xác tính lương **99.5%**.
+- **Tiết kiệm chi phí $6,900-17,700/năm** so với giải pháp thay thế.
+- Chi phí vận hành **chỉ $8-12/tháng** cho 100 người dùng.
+
+### Tầm nhìn Dài hạn
+
+- Mở rộng lên 500 người dùng với chi phí ~$88/tháng.
+- Tích hợp AI/ML (AWS Bedrock) cho phân tích dự đoán.
+- Hoạt động đa chi nhánh.
+- Sản phẩm SaaS tiềm năng.
+
+---
+
+## 9. Kết luận
+
+Hệ thống Quản lý Nhân sự với **Kiến trúc Serverless** cung cấp:
+
+✅ **Chi phí cực thấp:** Chỉ $8-12/tháng cho 100 người dùng Giai đoạn 1  
+
+✅ **Không có chi phí trước:** ~$72 thiết lập, không có chi phí thuê ngoài  
+
+✅ **ROI lớn:** Tiết kiệm $6,900-17,700/năm so với giải pháp thay thế  
+
+✅ **Có thể mở rộng:** Trả theo sử dụng, tự động mở rộng lên 500+ người dùng  
+
+✅ **Không cần bảo trì:** Serverless = không quản lý server  
+
+✅ **Phát triển nhanh:** 6 tháng MVP → sản xuất
+
+Đây là **giải pháp lý tưởng cho startup/SME** với nhóm nội bộ muốn xây dựng hệ thống nhân sự hiện đại mà không cần đầu tư lớn.

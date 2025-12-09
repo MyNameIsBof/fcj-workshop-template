@@ -5,55 +5,75 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Initiate Human Resource Management System project with Face Recognition Attendance
+* Conduct requirements analysis and project planning
+* Research and select appropriate technology stack
+* Set up development environment and project structure
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Project requirements analysis <br> - Define core features and functionalities <br> - Research technology stack options | 08/18/2025 | 08/18/2025 | |
+| 2 | - Finalize technology stack: React 19, Vite, TailwindCSS, Flask <br> - Design system architecture (Frontend/Backend separation) <br> - Create project structure | 08/19/2025 | 08/19/2025 | |
+| 3 | - Set up development environment <br> - Initialize React project with Vite <br> - Configure TailwindCSS and basic dependencies | 08/20/2025 | 08/20/2025 | |
+| 4 | - Set up Python Flask backend structure <br> - Install required Python packages (face_recognition, opencv, flask) <br> - Configure project directories | 08/21/2025 | 08/21/2025 | |
+| 5 | - Create database schema design <br> - Design API endpoints structure <br> - Set up version control (Git) | 08/22/2025 | 08/22/2025 | |
+| 6 | - Document project setup and architecture <br> - Create initial README with project overview <br> - Plan development timeline for remaining weeks | 08/23/2025 | 08/23/2025 | |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Successfully initiated the HR Management System project with comprehensive planning:
 
-* Successfully created and configured an AWS Free Tier account.
+* Completed thorough requirements analysis covering:
+  * Employee Management system requirements
+  * Face Recognition Attendance system specifications
+  * Payroll Management features
+  * User Management and role-based access control
+  * Reporting and Analytics needs
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Selected and finalized technology stack:
+  * Frontend: React 19 with Vite for modern development experience
+  * Styling: TailwindCSS for utility-first CSS approach
+  * Routing: React Router for client-side navigation
+  * Icons: Lucide React for consistent iconography
+  * Animations: Framer Motion for smooth UI transitions
+  * Backend: Python Flask for RESTful API
+  * Face Recognition: face_recognition library with OpenCV
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Established project architecture:
+  * Separated frontend and backend into independent modules
+  * Designed scalable folder structure for components, pages, services
+  * Planned API communication patterns between frontend and backend
 
-* Used AWS CLI to perform basic operations such as:
+* Set up complete development environment:
+  * Initialized React project with Vite configuration
+  * Configured TailwindCSS with custom theme settings
+  * Installed and configured all necessary dependencies
+  * Set up Python virtual environment for backend
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Created backend foundation:
+  * Structured Flask application with modular design
+  * Installed face recognition libraries and dependencies
+  * Configured project directories (datasets, trainer, attendance, logs)
+  * Set up Docker configuration for containerization
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Designed database schema:
+  * Employee information tables
+  * Attendance records structure
+  * User authentication and roles
+  * Payroll and task management schemas
+
+* Established development workflow:
+  * Initialized Git repository with proper .gitignore
+  * Created comprehensive README documentation
+  * Planned 6-week development timeline
+  * Set up project management and task tracking
+
+* Prepared for agile development approach with clear milestones and deliverables for subsequent weeks.
 
 

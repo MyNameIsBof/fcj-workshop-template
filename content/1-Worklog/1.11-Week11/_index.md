@@ -5,55 +5,92 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 11 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Integrate Attendance Tracking with face recognition system
+* Develop Payroll Management module with calculation engine
+* Build Task Management system for employee assignments
+* Implement Internal Chat communication feature
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Build Attendance Tracking dashboard <br> - Create attendance history view <br> - Implement attendance statistics and analytics | 09/15/2025 | 09/15/2025 | |
+| 2 | - Develop Payroll Management module <br> - Create salary calculation engine <br> - Implement payroll policies and rules | 09/16/2025 | 09/16/2025 | |
+| 3 | - Build Task Management system <br> - Create task assignment interface <br> - Implement task tracking and status updates | 09/17/2025 | 09/17/2025 | |
+| 4 | - Develop Internal Chat feature <br> - Implement real-time messaging <br> - Create chat interface and notifications | 09/18/2025 | 09/18/2025 | |
+| 5 | - Integrate all modules with existing system <br> - Test cross-module functionality <br> - Fix integration issues | 09/19/2025 | 09/19/2025 | |
+| 6 | - Optimize system performance <br> - Add data validation and error handling <br> - Improve user experience across modules | 09/20/2025 | 09/20/2025 | |
 
 
 ### Week 11 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Successfully implemented advanced HR management features:
 
-* Successfully created and configured an AWS Free Tier account.
+* Completed Attendance Tracking integration:
+  * Attendance dashboard with real-time statistics
+  * Daily, weekly, and monthly attendance views
+  * Attendance history with search and filter
+  * Integration with face recognition check-in/out
+  * Attendance reports generation
+  * Late arrival and early departure tracking
+  * Attendance analytics and insights
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Developed comprehensive Payroll Management:
+  * Salary calculation engine with configurable rules
+  * Payroll policy management (overtime, bonuses, deductions)
+  * Employee salary structure management
+  * Payroll generation and processing
+  * Payroll history and records
+  * Salary slip generation and download
+  * Tax calculation and compliance
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Built Task Management system:
+  * Task creation and assignment interface
+  * Task status tracking (Pending, In Progress, Completed)
+  * Task priority and deadline management
+  * Task assignment to employees or teams
+  * Task progress tracking and updates
+  * Task comments and attachments
+  * Task filtering and search functionality
 
-* Used AWS CLI to perform basic operations such as:
+* Implemented Internal Chat system:
+  * Real-time messaging between employees
+  * One-on-one and group chat support
+  * Message notifications and alerts
+  * Chat history and search
+  * File sharing in chat
+  * Online/offline status indicators
+  * Message read receipts
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Integrated all modules seamlessly:
+  * Cross-module data synchronization
+  * Unified user experience across features
+  * Consistent API communication patterns
+  * Shared component library utilization
+  * Integrated navigation and routing
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Enhanced system performance:
+  * Optimized database queries
+  * Implemented caching strategies
+  * Reduced API call overhead
+  * Improved page load times
+  * Optimized real-time updates
+
+* Added comprehensive validation:
+  * Form validation across all modules
+  * Data integrity checks
+  * Business rule validation
+  * Error handling and user feedback
+  * Input sanitization and security
+
+* Improved user experience:
+  * Consistent UI/UX patterns
+  * Intuitive navigation
+  * Helpful error messages
+  * Loading states and progress indicators
+  * Responsive design for all features
 
 

@@ -1,25 +1,27 @@
 ---
 title: "Internship Report"
-date: "2025-09-09"
+date: 2025-09-09
 weight: 1
 chapter: false
 ---
 
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+This report documents my internship experience at **Amazon Web Services Vietnam Co., Ltd.** as an **FCJ Cloud Intern** from **August 12, 2025** to **December 9, 2025**. Throughout this period, I had the opportunity to work on real-world cloud computing projects, develop technical skills, and contribute to meaningful initiatives in the AWS ecosystem.
 
-### Student Information:
+This comprehensive report covers my weekly work activities, project proposals, technical translations, event participation, hands-on workshops, self-assessment, and reflections on my professional growth during this valuable learning journey.
+
+---
+
+### Student Information
 
 &emsp; **Full Name:** Do Nguyen Duy Khang
 
-&emsp; **Phone Number:** 0933681718
+&emsp; **Phone Number:** 0933681718 
 
 &emsp; **Email:** khangdndse182375@fpt.edu.vn
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT University 
 
 &emsp; **Major:** Information Technology
 
@@ -29,16 +31,30 @@ chapter: false
 
 &emsp; **Internship Position:** FCJ Cloud Intern
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** August 12, 2025 - December 9, 2025
 
-![Your profile picture](/images/avatar.png)
+![Profile Picture](/images/daidien.jpg)
+
+---
 
 ### Report Content
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [Translated Blogs](3-BlogsTranslated/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+This internship report is organized into the following sections, each providing detailed insights into different aspects of my learning and contribution:
+
+1. **[Worklog](1-Worklog/)** - Weekly documentation of tasks, achievements, and learning milestones throughout the internship period
+
+2. **[Proposal](2-Proposal/)** - Project proposals and technical solutions developed during the internship
+
+3. **[Translated Blogs](3-BlogsTranslated/)** - Technical blog translations contributing to knowledge sharing in the AWS community
+
+4. **[Events Participated](4-EventParticipated/)** - AWS events, workshops, and community activities attended
+
+5. **[Workshop](5-Workshop/)** - Hands-on technical workshops completed, including building serverless REST APIs with AWS Lambda and API Gateway
+
+6. **[Self-evaluation](6-Self-evaluation/)** - Comprehensive self-assessment of performance, strengths, areas for improvement, and overall reflection
+
+7. **[Sharing and Feedback](7-Feedback/)** - Reflections, feedback, and insights gained from the internship experience
+
+---
+
+*This report serves as a comprehensive record of my professional development and contributions during my internship at AWS Vietnam.*

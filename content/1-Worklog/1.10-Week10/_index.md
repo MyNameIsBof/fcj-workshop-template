@@ -5,55 +5,84 @@ weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Implement Face Recognition system backend with Python Flask
+* Develop face detection and recognition algorithms
+* Create user registration with face photo capture
+* Build real-time face recognition attendance system
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Set up face recognition backend API <br> - Implement face detection using OpenCV <br> - Create face encoding generation system | 09/08/2025 | 09/08/2025 | |
+| 2 | - Build user registration endpoint with face photos <br> - Implement multi-angle photo capture <br> - Create face encoding storage system | 09/09/2025 | 09/09/2025 | |
+| 3 | - Develop face recognition matching algorithm <br> - Implement confidence scoring system <br> - Create face recognition API endpoint | 09/10/2025 | 09/10/2025 | |
+| 4 | - Build real-time face recognition frontend component <br> - Integrate camera access and video stream <br> - Implement live face detection display | 09/11/2025 | 09/11/2025 | |
+| 5 | - Connect face recognition to attendance system <br> - Implement automatic check-in/out recording <br> - Create attendance logging mechanism | 09/12/2025 | 09/12/2025 | |
+| 6 | - Test face recognition accuracy and performance <br> - Optimize recognition speed <br> - Handle edge cases and error scenarios | 09/13/2025 | 09/13/2025 | |
 
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Successfully implemented comprehensive Face Recognition Attendance system:
 
-* Successfully created and configured an AWS Free Tier account.
+* Developed robust face recognition backend:
+  * Flask API endpoints for face recognition operations
+  * Face detection using OpenCV and dlib libraries
+  * Face encoding generation with face_recognition library
+  * Model training system for improved accuracy
+  * Face encoding storage and retrieval system
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Built user registration with face recognition:
+  * Multi-photo capture from different angles
+  * Face encoding generation during registration
+  * Storage of face encodings in database
+  * User ID and name association with face data
+  * Registration validation and error handling
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Implemented real-time face recognition:
+  * Live camera feed integration
+  * Real-time face detection and tracking
+  * Face matching against registered users
+  * Confidence score calculation and display
+  * Recognition result visualization
 
-* Used AWS CLI to perform basic operations such as:
+* Created attendance recording system:
+  * Automatic check-in/out detection
+  * Attendance logging with timestamp
+  * User identification and verification
+  * Attendance history tracking
+  * Duplicate entry prevention
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Developed frontend face recognition interface:
+  * Camera access and video stream component
+  * Live face detection overlay
+  * Recognition status indicators
+  * Confidence score display
+  * User information display upon recognition
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Optimized system performance:
+  * Efficient face encoding comparison algorithms
+  * Fast face detection processing
+  * Optimized database queries for face matching
+  * Reduced recognition latency
+  * Memory-efficient face encoding storage
+
+* Implemented error handling and edge cases:
+  * No face detected scenarios
+  * Multiple faces in frame handling
+  * Low confidence recognition handling
+  * Camera access errors
+  * Network connectivity issues
+
+* Created comprehensive testing:
+  * Accuracy testing with various lighting conditions
+  * Performance benchmarking
+  * Edge case validation
+  * User experience testing
+  * System reliability verification
 
 

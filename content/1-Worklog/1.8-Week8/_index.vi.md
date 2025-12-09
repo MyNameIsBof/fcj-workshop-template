@@ -5,56 +5,80 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Xây dựng nền tảng frontend với React 19 và Vite
+* Triển khai cấu trúc routing và layout components
+* Tạo các UI components tái sử dụng với TailwindCSS
+* Thiết lập lớp API service cho giao tiếp backend
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1 | - Thiết lập React Router cho điều hướng <br> - Tạo các layout components chính (Header, Sidebar, Footer) <br> - Triển khai cấu trúc responsive design | 25/08/2025 | 25/08/2025 | |
+| 2 | - Xây dựng các UI components tái sử dụng (Button, Input, Card, Modal) <br> - Triển khai dark/light theme toggle <br> - Tạo các components trạng thái loading và error | 26/08/2025 | 26/08/2025 | |
+| 3 | - Thiết lập lớp API service với axios/fetch <br> - Tạo cấu hình API endpoints <br> - Triển khai error handling và response interceptors | 27/08/2025 | 27/08/2025 | |
+| 4 | - Xây dựng trang Dashboard với các widgets tổng quan <br> - Tạo cấu trúc menu điều hướng <br> - Triển khai page routing và protected routes | 28/08/2025 | 28/08/2025 | |
+| 5 | - Thêm Framer Motion animations vào components <br> - Tích hợp Lucide React icons trong toàn bộ UI <br> - Hoàn thiện UI/UX với các transitions mượt mà | 29/08/2025 | 29/08/2025 | |
+| 6 | - Kiểm thử responsive design trên nhiều thiết bị <br> - Tối ưu hiệu suất component <br> - Tài liệu hóa cách sử dụng component và props | 30/08/2025 | 30/08/2025 | |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Đã thiết lập thành công nền tảng frontend với kiến trúc React hiện đại:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Triển khai hệ thống routing toàn diện:
+  * Cấu hình React Router với nested routes
+  * Tạo các protected route components cho xác thực
+  * Thiết lập navigation guards và route transitions
+  * Triển khai dynamic route parameters
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Xây dựng cấu trúc layout hoàn chỉnh:
+  * Component Header responsive với user menu
+  * Sidebar navigation có thể thu gọn với chỉ báo trạng thái active
+  * Component Footer với thông tin hệ thống
+  * Thiết kế responsive cho mobile với hamburger menu
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phát triển thư viện UI component tái sử dụng:
+  * Component Button với nhiều biến thể (primary, secondary, danger)
+  * Components Input với các trạng thái validation
+  * Components Card để hiển thị nội dung
+  * Components Modal/Dialog cho overlays
+  * Loading spinners và skeleton screens
+  * Error boundary và error display components
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Thiết lập lớp giao tiếp API:
+  * Tạo API service tập trung với axios
+  * Triển khai request/response interceptors
+  * Thiết lập cấu hình environment variables
+  * Xây dựng error handling và retry mechanisms
+  * Tạo API endpoint constants và types
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Thiết kế và triển khai Dashboard:
+  * Overview widgets hiển thị các metrics chính
+  * Quick access cards cho các tính năng chính
+  * Recent activity feed
+  * Placeholders cho visualization thống kê
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tích hợp các cải tiến UI hiện đại:
+  * Framer Motion animations cho chuyển đổi trang mượt mà
+  * Lucide React icons trong toàn bộ ứng dụng
+  * Chức năng dark/light theme toggle
+  * Responsive breakpoints cho mobile, tablet, desktop
+
+* Tối ưu hiệu suất ứng dụng:
+  * Code splitting với React.lazy()
+  * Component memoization khi phù hợp
+  * Tối ưu bundle size với Vite
+  * Triển khai loading states cho UX tốt hơn
+
+* Tạo tài liệu toàn diện:
+  * Hướng dẫn sử dụng component
+  * Mẫu tích hợp API
+  * Quy ước styling với TailwindCSS
+  * Tài liệu quy trình phát triển
 
 
 

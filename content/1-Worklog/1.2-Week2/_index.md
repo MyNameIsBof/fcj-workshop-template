@@ -5,55 +5,66 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Gain proficiency in AWS network security concepts, specifically Security Groups and Network ACLs.
+* Explore VPC connectivity options and understand different network interconnection methods.
+* Study load balancing principles and familiarize with AWS Elastic Load Balancer types and their use cases.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Study Security Groups: <br>&emsp; + Core concepts and stateful behavior <br>&emsp; + Rule creation and configuration procedures <br>&emsp; + Application to Elastic Network Interfaces | 08/11/2025 | 08/11/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Explore Network ACL (NACL): <br>&emsp; + Fundamental concepts and stateless characteristics <br>&emsp; + Key differences between NACL and Security Groups <br>&emsp; + Sequential rule evaluation from top to bottom | 08/12/2025 | 08/12/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Hands-on Practice:** <br>&emsp; + Create Security Group for EC2 instance <br>&emsp; + Configure NACL for subnet <br>&emsp; + Compare security effectiveness between both methods <br> - Study VPC Flow Logs | 08/13/2025 | 08/13/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Learn about VPC connectivity: <br>&emsp; + VPC Peering and its limitations <br>&emsp; + Transit Gateway <br>&emsp; + Site-to-Site VPN <br>&emsp; + AWS Direct Connect | 08/14/2025 | 08/14/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Study Elastic Load Balancing: <br>&emsp; + ELB concepts and types <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Network Load Balancer (NLB) <br>&emsp; + Sticky Session and Health Check <br> - **Hands-on Practice:** <br>&emsp; + Create ALB to distribute traffic <br>&emsp; + Configure Target Groups | 08/15/2025 | 08/15/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Developed clear understanding of Security Groups and NACL:
 
-* Successfully created and configured an AWS Free Tier account.
+  * Security Groups function as stateful firewalls that only permit "allow" rules
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+  * NACL serves as a stateless firewall applied at the subnet level
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+  * Security Groups operate at the instance level, while NACL affects all servers within a subnet
 
-* Used AWS CLI to perform basic operations such as:
+* Learned to utilize VPC Flow Logs for monitoring IP traffic within VPC without capturing packet contents.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Understood various VPC connection methods:
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+  * VPC Peering connects two VPCs but does not support transitive routing
+
+  * Transit Gateway enables connectivity between multiple VPCs and on-premises networks
+
+  * Site-to-Site VPN uses Virtual Private Gateway and Customer Gateway
+
+  * AWS Direct Connect provides dedicated connections with low latency (20-30ms)
+
+* Gained proficiency in Elastic Load Balancing:
+
+  * Four main types: ALB, NLB, Classic Load Balancer, and Gateway Load Balancer
+
+  * ALB operates at Layer 7, supporting HTTP/HTTPS and path-based routing
+
+  * NLB operates at Layer 4, supporting TCP/TLS and providing static IP addresses
+
+  * Key features include Health Check, Sticky Session, and Access Logs
+
+* Successfully completed hands-on practice:
+
+  * Created Security Groups for EC2 with appropriate rules
+
+  * Configured NACL for subnet with logical rule ordering
+
+  * Set up Application Load Balancer with Target Groups
+
+  * Verified Load Balancer operation and traffic distribution
+
+* Developed ability to compare and select appropriate security solutions and network connectivity options for specific use cases.
 
 

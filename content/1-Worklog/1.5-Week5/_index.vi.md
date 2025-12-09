@@ -5,56 +5,85 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững AWS Shared Responsibility Model
+* Hiểu sâu về quản lý danh tính và truy cập trên AWS
+* Thành thạo IAM, Organizations, Identity Center, Cognito, KMS, và Security Hub
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1–2 | Shared Responsibility Model + IAM cơ bản (Root, Users, Groups, Policies, Roles) | 25–26/08/2025 | 26/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | IAM Policies (Identity-based vs Resource-based), Logic đánh giá Policy, Explicit Deny | 27/08/2025 | 27/08/2025 | |
+| 4 | IAM Roles, Trust Policy, STS, AssumeRole, Cross-account access, Service roles | 28/08/2025 | 28/08/2025 | |
+| 5 | AWS Organizations, OU, SCP, Consolidated Billing + AWS Identity Center | 29/08/2025 | 29/08/2025 | |
+| 6 | Amazon Cognito, AWS KMS, AWS Security Hub | 30/08/2025 | 30/08/2025 | |
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Đã hoàn thành tất cả mục tiêu tuần 5 với trình độ vững chắc về:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* **AWS Shared Responsibility Model**: AWS bảo mật cloud, khách hàng bảo mật trong cloud. Trách nhiệm thay đổi theo loại dịch vụ (Infrastructure → Container → Abstracted services).
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* **Bảo vệ Root Account**: Bật MFA, không bao giờ sử dụng cho công việc hàng ngày, lưu trữ credentials an toàn, tạo IAM Administrator users thay thế.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* **Thành thạo AWS IAM**:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  * Principals: Root, IAM Users, IAM Roles, Federated Users, AWS Services
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+  * Loại Policy và đánh giá: Explicit Deny thắng, sau đó Allow, sau đó default Deny
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  * IAM Roles + Trust Policy + STS cho truy cập tạm thời, least-privilege, cross-account
+
+  * Cross-account delegation và service-linked roles
+
+* **AWS Organizations**:
+
+  * Quản lý multi-account tập trung với OUs
+
+  * Service Control Policies (SCP) để thiết lập guardrails quyền
+
+  * Consolidated Billing
+
+* **AWS Identity Center (trước đây là AWS SSO)**:
+
+  * Tích hợp nguồn danh tính (built-in, AWS Managed Microsoft AD, AD Connector, external IdP)
+
+  * Permission Sets → IAM Roles được tự động cung cấp trong member accounts
+
+* **Amazon Cognito**:
+
+  * User Pools cho đăng ký/đăng nhập người dùng
+
+  * Identity Pools cho phát hành AWS credentials tạm thời
+
+* **AWS KMS**:
+
+  * Customer Managed Keys (CMK), tuân thủ FIPS 140-2
+
+  * Data Key pattern cho mã hóa quy mô lớn
+
+* **AWS Security Hub**:
+
+  * Kiểm tra bảo mật liên tục chống lại AWS Foundational Best Practices, CIS, PCI DSS, v.v.
+
+  * Security score và findings được ưu tiên
+
+Đã hoàn thành thực hành:
+
+* Xây dựng cấu trúc AWS Organizations đầy đủ với SCPs
+
+* Cấu hình AWS Identity Center với Permission Sets
+
+* Triển khai luồng xác thực Cognito
+
+* Mã hóa tài nguyên với KMS
+
+* Kích hoạt và phân tích findings từ Security Hub
 
 
 

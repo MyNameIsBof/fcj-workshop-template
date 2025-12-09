@@ -5,56 +5,80 @@ weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Triển khai module Employee Management với các thao tác CRUD
+* Phát triển hệ thống User Management với kiểm soát truy cập dựa trên vai trò
+* Tạo cơ chế xác thực và phân quyền
+* Xây dựng tính năng quản lý hồ sơ và thông tin nhân viên
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1 | - Thiết kế Employee data model và API endpoints <br> - Tạo trang Employee List với table view <br> - Triển khai chức năng tìm kiếm và lọc | 01/09/2025 | 01/09/2025 | |
+| 2 | - Xây dựng form Add/Edit Employee với validation <br> - Triển khai employee profile view <br> - Tạo trang chi tiết nhân viên | 02/09/2025 | 02/09/2025 | |
+| 3 | - Phát triển module User Management <br> - Triển khai kiểm soát truy cập dựa trên vai trò (Admin/User) <br> - Tạo đăng ký người dùng và xác thực | 03/09/2025 | 03/09/2025 | |
+| 4 | - Xây dựng chức năng login/logout <br> - Triển khai quản lý session <br> - Tạo protected routes dựa trên vai trò người dùng | 04/09/2025 | 04/09/2025 | |
+| 5 | - Tích hợp frontend với backend API <br> - Kiểm thử các thao tác CRUD cho nhân viên <br> - Xác thực luồng xác thực người dùng | 05/09/2025 | 05/09/2025 | |
+| 6 | - Thêm pagination và sorting vào danh sách nhân viên <br> - Triển khai bulk operations (xóa, xuất) <br> - Hoàn thiện UI/UX cho quản lý nhân viên | 06/09/2025 | 06/09/2025 | |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Đã triển khai thành công các module quản lý HR cốt lõi:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Phát triển hệ thống Employee Management toàn diện:
+  * Trang Employee List với các tính năng table nâng cao (sorting, filtering, pagination)
+  * Chức năng tìm kiếm trên nhiều trường nhân viên
+  * Form Add Employee với validation toàn diện
+  * Chức năng Edit Employee với dữ liệu pre-populated
+  * Employee detail view với hiển thị thông tin đầy đủ
+  * Xóa nhân viên với confirmation modal
+  * Bulk operations cho quản lý nhiều nhân viên
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Xây dựng module User Management mạnh mẽ:
+  * Đăng ký người dùng với gán vai trò
+  * Danh sách người dùng với lọc dựa trên vai trò
+  * Chỉnh sửa vai trò và quyền người dùng
+  * Quản lý hồ sơ người dùng
+  * Kích hoạt/vô hiệu hóa tài khoản
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Triển khai xác thực và phân quyền:
+  * Trang đăng nhập với validation thông tin đăng nhập
+  * Xác thực dựa trên JWT token
+  * Quản lý session với lưu trữ an toàn
+  * Cơ chế tự động refresh token
+  * Chức năng logout với dọn dẹp session
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Tạo kiểm soát truy cập dựa trên vai trò (RBAC):
+  * Vai trò Admin với quyền truy cập đầy đủ hệ thống
+  * Vai trò User với quyền hạn hạn chế
+  * Protected routes dựa trên vai trò người dùng
+  * Render UI component dựa trên quyền
+  * Access control middleware
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tích hợp frontend với backend:
+  * Tích hợp RESTful API cho các thao tác nhân viên
+  * Error handling và phản hồi người dùng
+  * Loading states cho các thao tác async
+  * Optimistic UI updates
+  * Form validation ở cả client và server side
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Cải thiện trải nghiệm người dùng:
+  * Giao diện quản lý nhân viên responsive
+  * Form validation real-time
+  * Thông báo thành công/lỗi
+  * Confirmation dialogs cho các hành động phá hủy
+  * Chuyển đổi và animations mượt mà
+
+* Triển khai tính năng quản lý dữ liệu:
+  * Chức năng xuất dữ liệu nhân viên
+  * Nhập dữ liệu nhân viên từ CSV
+  * Upload ảnh hồ sơ nhân viên
+  * Phân trang dữ liệu cho datasets lớn
+  * Tùy chọn lọc nâng cao
 
 
 

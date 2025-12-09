@@ -5,56 +5,67 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững kiến thức về bảo mật mạng trong AWS (Security Groups, NACL).
+* Hiểu về kết nối VPC và các phương thức kết nối mạng.
+* Tìm hiểu về cân bằng tải với AWS ELB và các loại Load Balancer.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu về Security Groups: <br>&emsp; + Khái niệm và đặc tính stateful <br>&emsp; + Cách tạo và cấu hình rules <br>&emsp; + Áp dụng cho Elastic Network Interface | 11/08/2025 | 11/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tìm hiểu về Network ACL (NACL): <br>&emsp; + Khái niệm và đặc tính stateless <br>&emsp; + Sự khác biệt giữa NACL và Security Groups <br>&emsp; + Cơ chế đánh giá rules từ trên xuống | 12/08/2025 | 12/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - **Thực hành:** <br>&emsp; + Tạo Security Group cho EC2 instance <br>&emsp; + Cấu hình NACL cho subnet <br>&emsp; + So sánh hiệu quả bảo mật giữa 2 phương pháp <br> - Tìm hiểu về VPC Flow Logs | 13/08/2025 | 13/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 5 | - Tìm hiểu về kết nối VPC: <br>&emsp; + VPC Peering và các hạn chế <br>&emsp; + Transit Gateway <br>&emsp; + Site-to-Site VPN <br>&emsp; + AWS Direct Connect | 14/08/2025 | 14/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 6 | - Tìm hiểu về Elastic Load Balancing: <br>&emsp; + Khái niệm ELB và các loại <br>&emsp; + Application Load Balancer (ALB) <br>&emsp; + Network Load Balancer (NLB) <br>&emsp; + Sticky Session và Health Check <br> - **Thực hành:** <br>&emsp; + Tạo ALB để phân phối traffic <br>&emsp; + Cấu hình Target Groups | 15/08/2025 | 15/08/2025 | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Đã hiểu rõ về Security Groups và NACL:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+  * Security Groups là tường lửa stateful chỉ cho phép các rules "allow"
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  * NACL là tường lửa stateless được áp dụng cho subnet
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+  * Security Groups ảnh hưởng đến từng instance, NACL ảnh hưởng đến nhiều server trong subnet
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Đã học cách sử dụng VPC Flow Logs để giám sát lưu lượng IP trong VPC mà không cần capture nội dung packet.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Hiểu về các phương thức kết nối VPC:
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  * VPC Peering để kết nối 2 VPC, không hỗ trợ transitive routing
+
+  * Transit Gateway để kết nối nhiều VPC và mạng on-premises
+
+  * Site-to-Site VPN với Virtual Private Gateway và Customer Gateway
+
+  * AWS Direct Connect với độ trễ thấp (20-30ms)
+
+* Nắm vững kiến thức về Elastic Load Balancing:
+
+  * 4 loại: ALB, NLB, Classic LB, Gateway LB
+
+  * ALB hoạt động ở Layer 7, hỗ trợ HTTP/HTTPS và path-based routing
+
+  * NLB hoạt động ở Layer 4, hỗ trợ TCP/TLS và static IP
+
+  * Các tính năng: Health Check, Sticky Session, Access Logs
+
+* Đã hoàn thành thực hành thành công:
+
+  * Tạo Security Groups cho EC2 với các rules phù hợp
+
+  * Cấu hình NACL cho subnet với thứ tự rules hợp lý
+
+  * Thiết lập Application Load Balancer với Target Groups
+
+  * Kiểm tra hoạt động của Load Balancer và phân phối traffic
+
+* Có khả năng so sánh và lựa chọn giải pháp bảo mật và kết nối mạng phù hợp cho các use case cụ thể.
 
 
 

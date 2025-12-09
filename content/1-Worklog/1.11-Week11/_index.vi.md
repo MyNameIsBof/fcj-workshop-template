@@ -5,56 +5,93 @@ weight: 2
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tích hợp Attendance Tracking với hệ thống face recognition
+* Phát triển module Payroll Management với engine tính toán
+* Xây dựng hệ thống Task Management cho phân công nhân viên
+* Triển khai tính năng Internal Chat giao tiếp
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1 | - Xây dựng Attendance Tracking dashboard <br> - Tạo attendance history view <br> - Triển khai thống kê và phân tích attendance | 15/09/2025 | 15/09/2025 | |
+| 2 | - Phát triển module Payroll Management <br> - Tạo engine tính toán lương <br> - Triển khai payroll policies và rules | 16/09/2025 | 16/09/2025 | |
+| 3 | - Xây dựng hệ thống Task Management <br> - Tạo giao diện phân công task <br> - Triển khai theo dõi task và cập nhật trạng thái | 17/09/2025 | 17/09/2025 | |
+| 4 | - Phát triển tính năng Internal Chat <br> - Triển khai real-time messaging <br> - Tạo giao diện chat và notifications | 18/09/2025 | 18/09/2025 | |
+| 5 | - Tích hợp tất cả modules với hệ thống hiện có <br> - Kiểm thử chức năng cross-module <br> - Sửa các vấn đề tích hợp | 19/09/2025 | 19/09/2025 | |
+| 6 | - Tối ưu hiệu suất hệ thống <br> - Thêm validation dữ liệu và error handling <br> - Cải thiện trải nghiệm người dùng trên các modules | 20/09/2025 | 20/09/2025 | |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Đã triển khai thành công các tính năng quản lý HR nâng cao:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thành tích hợp Attendance Tracking:
+  * Attendance dashboard với thống kê real-time
+  * Attendance views theo ngày, tuần, tháng
+  * Attendance history với tìm kiếm và lọc
+  * Tích hợp với face recognition check-in/out
+  * Tạo báo cáo attendance
+  * Theo dõi đến muộn và về sớm
+  * Phân tích và insights attendance
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phát triển Payroll Management toàn diện:
+  * Engine tính toán lương với rules có thể cấu hình
+  * Quản lý payroll policies (overtime, bonuses, deductions)
+  * Quản lý cấu trúc lương nhân viên
+  * Tạo và xử lý payroll
+  * Lịch sử và bản ghi payroll
+  * Tạo và tải xuống salary slip
+  * Tính toán thuế và tuân thủ
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Xây dựng hệ thống Task Management:
+  * Giao diện tạo và phân công task
+  * Theo dõi trạng thái task (Pending, In Progress, Completed)
+  * Quản lý ưu tiên và deadline task
+  * Phân công task cho nhân viên hoặc teams
+  * Theo dõi tiến độ và cập nhật task
+  * Comments và attachments cho task
+  * Chức năng lọc và tìm kiếm task
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Triển khai hệ thống Internal Chat:
+  * Real-time messaging giữa nhân viên
+  * Hỗ trợ chat một-một và nhóm
+  * Thông báo và alerts tin nhắn
+  * Lịch sử chat và tìm kiếm
+  * Chia sẻ file trong chat
+  * Chỉ báo trạng thái online/offline
+  * Read receipts cho tin nhắn
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tích hợp tất cả modules một cách liền mạch:
+  * Đồng bộ dữ liệu cross-module
+  * Trải nghiệm người dùng thống nhất trên các tính năng
+  * Mẫu giao tiếp API nhất quán
+  * Sử dụng thư viện component dùng chung
+  * Điều hướng và routing tích hợp
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Cải thiện hiệu suất hệ thống:
+  * Tối ưu database queries
+  * Triển khai chiến lược caching
+  * Giảm overhead API calls
+  * Cải thiện thời gian tải trang
+  * Tối ưu real-time updates
+
+* Thêm validation toàn diện:
+  * Form validation trên tất cả modules
+  * Kiểm tra tính toàn vẹn dữ liệu
+  * Validation business rules
+  * Error handling và phản hồi người dùng
+  * Input sanitization và bảo mật
+
+* Cải thiện trải nghiệm người dùng:
+  * Mẫu UI/UX nhất quán
+  * Điều hướng trực quan
+  * Thông báo lỗi hữu ích
+  * Loading states và progress indicators
+  * Thiết kế responsive cho tất cả tính năng
 
 
 

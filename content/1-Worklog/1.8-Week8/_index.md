@@ -5,55 +5,79 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Build frontend foundation with React 19 and Vite
+* Implement routing structure and layout components
+* Create reusable UI components with TailwindCSS
+* Establish API service layer for backend communication
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 1 | - Set up React Router for navigation <br> - Create main layout components (Header, Sidebar, Footer) <br> - Implement responsive design structure | 08/25/2025 | 08/25/2025 | |
+| 2 | - Build reusable UI components (Button, Input, Card, Modal) <br> - Implement dark/light theme toggle <br> - Create loading and error state components | 08/26/2025 | 08/26/2025 | |
+| 3 | - Set up API service layer with axios/fetch <br> - Create API endpoints configuration <br> - Implement error handling and response interceptors | 08/27/2025 | 08/27/2025 | |
+| 4 | - Build Dashboard page with overview widgets <br> - Create navigation menu structure <br> - Implement page routing and protected routes | 08/28/2025 | 08/28/2025 | |
+| 5 | - Add Framer Motion animations to components <br> - Integrate Lucide React icons throughout UI <br> - Polish UI/UX with smooth transitions | 08/29/2025 | 08/29/2025 | |
+| 6 | - Test responsive design on multiple devices <br> - Optimize component performance <br> - Document component usage and props | 08/30/2025 | 08/30/2025 | |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Successfully established frontend foundation with modern React architecture:
 
-* Successfully created and configured an AWS Free Tier account.
+* Implemented comprehensive routing system:
+  * Configured React Router with nested routes
+  * Created protected route components for authentication
+  * Set up navigation guards and route transitions
+  * Implemented dynamic route parameters
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Built complete layout structure:
+  * Responsive Header component with user menu
+  * Collapsible Sidebar navigation with active state indicators
+  * Footer component with system information
+  * Mobile-responsive design with hamburger menu
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Developed reusable UI component library:
+  * Button component with multiple variants (primary, secondary, danger)
+  * Input components with validation states
+  * Card components for content display
+  * Modal/Dialog components for overlays
+  * Loading spinners and skeleton screens
+  * Error boundary and error display components
 
-* Used AWS CLI to perform basic operations such as:
+* Established API communication layer:
+  * Created centralized API service with axios
+  * Implemented request/response interceptors
+  * Set up environment variable configuration
+  * Built error handling and retry mechanisms
+  * Created API endpoint constants and types
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Designed and implemented Dashboard:
+  * Overview widgets showing key metrics
+  * Quick access cards for main features
+  * Recent activity feed
+  * Statistics visualization placeholders
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Integrated modern UI enhancements:
+  * Framer Motion animations for smooth page transitions
+  * Lucide React icons throughout the application
+  * Dark/Light theme toggle functionality
+  * Responsive breakpoints for mobile, tablet, desktop
+
+* Optimized application performance:
+  * Code splitting with React.lazy()
+  * Component memoization where appropriate
+  * Optimized bundle size with Vite
+  * Implemented loading states for better UX
+
+* Created comprehensive documentation:
+  * Component usage guidelines
+  * API integration patterns
+  * Styling conventions with TailwindCSS
+  * Development workflow documentation
 
 

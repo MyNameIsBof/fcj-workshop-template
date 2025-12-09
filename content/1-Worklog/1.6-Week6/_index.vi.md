@@ -5,55 +5,77 @@ weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nắm vững các khái niệm database cơ bản và nâng cao
+* Phân biệt rõ ràng OLTP vs OLAP, RDBMS vs NoSQL
+* Thành thạo các dịch vụ database AWS: RDS, Aurora, Redshift, ElastiCache
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 1–2 | Khái niệm DB cơ bản: PK, FK, Index, Partition, Query Plan, Buffer, Log, Session | 01–02/09/2025 | 02/09/2025 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | RDBMS vs NoSQL • OLTP vs OLAP | 03/09/2025 | 03/09/2025 | |
+| 4 | Amazon RDS & Amazon Aurora (tương thích MySQL/PostgreSQL) | 04/09/2025 | 04/09/2025 | |
+| 5 | Amazon Redshift – Managed Data Warehouse & OLAP | 05/09/2025 | 05/09/2025 | |
+| 6 | Amazon ElastiCache (Redis & Memcached) | 06/09/2025 | 06/09/2025 | |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Đã hoàn thành tất cả mục tiêu tuần 6 với trình độ vững chắc về:
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Khái niệm database cơ bản: Primary Key, Foreign Key, Index, Partitioning, Execution Plan, Buffer Pool, Transaction Log, Session
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Phân biệt rõ ràng giữa:
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+  * RDBMS (quan hệ, SQL, ACID) vs NoSQL (schema linh hoạt, eventual consistency)
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+  * OLTP (giao dịch nhanh, row-based) vs OLAP (phân tích phức tạp, columnar, dữ liệu lịch sử)
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* **Amazon RDS**:
+
+  * Database quan hệ được quản lý hoàn toàn (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora)
+
+  * Backup tự động, Read Replicas, Multi-AZ failover, storage autoscaling, mã hóa at rest & in transit
+
+* **Amazon Aurora**:
+
+  * Database quan hệ cloud-native với tương thích MySQL & PostgreSQL
+
+  * Lớp lưu trữ cách mạng cho hiệu suất đọc/ghi đồng thời cao
+
+  * Tính năng độc đáo: Backtrack, Aurora Clones, Global Database, Multi-Master
+
+* **Amazon Redshift**:
+
+  * Data warehouse quy mô petabyte được quản lý hoàn toàn tối ưu cho OLAP
+
+  * Kiến trúc MPP + lưu trữ columnar
+
+  * Leader + Compute nodes, Redshift Spectrum, concurrency scaling
+
+* **Amazon ElastiCache**:
+
+  * Redis & Memcached được quản lý
+
+  * Phát hiện và thay thế lỗi tự động
+
+  * Được sử dụng như lớp cache phía trước database để giảm tải workload OLTP đọc nhiều
+
+  * Redis được ưa chuộng cho ứng dụng mới
+
+Đã hoàn thành thực hành:
+
+* Triển khai RDS Multi-AZ + Read Replica
+
+* Tạo Aurora cluster với Global Database
+
+* Xây dựng Redshift cluster và chạy các truy vấn phân tích
+
+* Triển khai ElastiCache Redis và tích hợp với ứng dụng mẫu
 
 
 
